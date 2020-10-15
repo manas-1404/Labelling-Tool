@@ -37,6 +37,8 @@ Other files
 
 - `requirements.txt`
   - Installation requirements
+- `README_Python_setup.md`
+  - Instructions to install Python
 
 
 
@@ -87,7 +89,7 @@ Each sample consists of several measured variables (columns) and observations (r
 
 ### Data
 
-Create a folder where to store the data. The location of the folder will be your `path_base`. The folder name will be `folder` in the Jupiter notebook. The repository contains examples of data sets types needed for running the labelling tool. The data is in the form of .csv data files. Each data file consists of many 24h sets across 3 sensors, the data  is in the format ****
+Create a folder where to store the data. The location of the folder will be your `path_base`. The folder name will be `folder` in the Jupiter notebook. The repository contains examples of data sets types needed for running the labelling tool. The data is in the form of .csv data files. Each data file consists of many 24h sets across 3 sensors, the data  is in the format:
 
 | time                | sensor1 | Sensor2 | sensor3 |
 | ------------------- | ------- | ------- | ------- |
@@ -108,9 +110,7 @@ Create a folder where to store the data. The location of the folder will be your
 
 ### Data
 
-
-
-Create a folder where to store the data. The location of the folder will be your `path_base`. The folder name will be `folder` in the Jupiter notebook. The repository contains examples of data sets types needed for running the labelling tool. The data is in the form of .csv data files. Each data file consists of many 24h sets across 2 sensors, the date type is in the format 
+Create a folder where to store the data. The location of the folder will be your `path_base`. The folder name will be `folder` in the Jupiter notebook. The repository contains examples of data sets types needed for running the labelling tool. The data is in the form of .csv data files. Each data file consists of many 24h sets across 2 sensors, the date type is in the format:
 
 | day        | hour     | sensor1 | sensor2 |
 | ---------- | -------- | ------- | ------- |
@@ -120,22 +120,10 @@ Create a folder where to store the data. The location of the folder will be your
 
 ### Repository content 
 
-
-
-### Opening the notebook with python - recommended
-
-1. Open your command prompt and activate your environment
-2. From the command prompt cd to the directory where the notebooks are located. 
-3. Lauch the script from terminal by typing `python name_of_script.py`
-4. Once the script is launched, follow the instructions: select case e name of file
-
-#### Note: you need to :
-
-- Create folder called "labels" into each case folder
-- Change path of  working directory path_all in the .py script
-- After performing the annotation, close the plot and relaunch the script following the instructions above by typing `python name_of_script.py`.
-- Restart the annotation
-- Note: if the user wants to change any of his selections, he needs to move forward to the next plot by clicking 'Next', perform a selection of the anomalous data, and then go back and restart.
+- `NEST_data_annotation.ipynb` 
+  - Allows labelling of data file `data_name`and saves the labels for each sensor as `data_name_labels_time_sensor_name.csv`. Usage of the notebook can be found in the notebook itself
+- `labels_processing/_NEST_labels_processing.ipynb` 
+  - Post-process the labels. Here, label duplicates (e.g. when the labelling expert changed his mind) are removed and labels are saved in each data file as pickle file: `sensor_name_Anomaly`. Afterwards,  a final data set is created by combining all the data and anomalies into a collective anomaly. The data set is saved as pickle file : `CaseName_Anomaly_collective`. 
 
 
 
