@@ -11,23 +11,20 @@ This guide will allow you to install python through Anaconda.
 2. Complete the installation
 3. On your terminal: update your base Anaconda packages. These should be already installed
     - `conda update conda`
-    - `conda update anaconda`
-    - `conda update python`
-    - `conda update --all`
 
 ### creating the dev enviroment in anaconda
 
 1. create an anaconda enviroment 
-  - `conda create --name ADAS_env python=3.7 pip`
+  - `conda create --name Worka_env python=3.7 pip`
     - this create an enviroment called `Work_env` with python version 3.7 installed, and installs pip as well
-2. activate that enviroment `. activate ADAS_env`  (MacOS), or  `conda activate Work_env`  (Windows)
+2. activate that enviroment `. activate Work_env`  (MacOS), or  `conda activate Work_env`  (Windows)
   - later if you want to deactivate you can do:  `. deactivate Work_env`
 3. installing packages:
   - cd to the directory where requirements.txt is located. (i.e. `cd Desktop/Annotation_Tool/`)
   - `pip install -r requirements.txt` 
 4. create a Jupyter kernel
   - With your `ADAS_env` environment activated do `conda install ipykernel`
-  - `python -m ipykernel install --user --name ADAS_env --display-name "ADAS_env"` 
+  - `python -m ipykernel install --user --name Work_env --display-name "Work_env"` 
 
 ### Opening the notebook with jupyter
 
