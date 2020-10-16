@@ -10,6 +10,8 @@ For this purpose, we have created an interactive annotation tool that allows to 
 
 Labelled data is then returned for future further analysis.
 
+Link Gitlab: https://gitlab.com/stefania8/data-labelling-tool
+
 
 
 # Getting Started
@@ -39,8 +41,6 @@ Other files
   - Installation requirements
 - `README_Python_setup.md`
   - Instructions to install Python
-
-
 
 
 
@@ -81,7 +81,7 @@ Each sample consists of several measured variables (columns) and observations (r
 
 - `labels_processing/_FCS_labels_processing.ipynb` 
 
-  - Post-process the labels. Here, label duplicates (e.g. when the labelling expert changed his mind) are removed and labels are saved in each data file as `Labels_postproc.csv`. Afterwards, for each sample of a specific data file, a unique ID is created and labels are associated to it by adding a column. For each data file containing several samples (e.g. `001_River_A_Data`) a final data set is created by combining all the samples and their associated labels. The data set is saved as pickle file. 
+  - Post-process the labels. Here, label duplicates (e.g. when the labelling expert changed his mind) are removed and labels are saved in each data file as `Labels_postproc.csv`. Afterwards, for each sample of a specific data file, a unique ID is created and labels are associated to it by adding a column. For each data file containing several samples (e.g. s1, s2) a final data set is created by combining all the samples and their associated labels. The data set is saved as pickle file. 
 
   
 
@@ -131,5 +131,6 @@ Create a folder where to store the data. The location of the folder will be your
 
 1. Open your command prompt and cd to the directory where the notebooks are located. 
 2. Open the notebook from terminal by typing `jupyter notebook`
-3. Once the notebook is open, select your `ADAS_env` kernel from Kernel
+3. Once the notebook is open, select your `Work_env` kernel from Kernel
 4. Follow the instructions
+
