@@ -28,7 +28,7 @@ The scripts run in Python that should be installed on your local machine. For in
 
 Here are shown three examples : 
 
-2. FCS Data annotation tool: `FCS_data_annotation.ipynb`  is applied on .fcs data sets, where each data file is visusalised as a scatter plot that can be labelled by choosing from a series of different labels. This tool is based on the `event_handling` API from matplotlib.
+1. FCS Data annotation tool: `FCS_data_annotation.ipynb`  is applied on .fcs data sets, where each data file is visusalised as a scatter plot that can be labelled by choosing from a series of different labels. This tool is based on the `event_handling` API from matplotlib.
 2. UWO Data annotation tool: `UWO_data_annotation.ipynb`  is based on `SpanSelector`, a mouse widget from matplotlib used to select areas of the plot, returning the values within it. This data annotation tool is applied on time series data and it is used for single and multi-variate data sets.
 3. NEST Data annotation: `NEST_data_annotation.ipynb`  is based on `SpanSelector`, a mouse widget from matplotlib used to select areas of the plot, returning the values within it. This data annotation tool is applied on time series data and it is used for single and multi-variate data sets. This tool can be used as .py version
 4. `functions`

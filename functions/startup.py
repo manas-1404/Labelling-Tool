@@ -4,8 +4,8 @@ ipython = get_ipython()
 
 # If in ipython, load autoreload extension
 if 'ipython' in globals():
-    ipython.magic('load_ext autoreload')
-    ipython.magic('autoreload 2')
+    ipython.run_line_magic('load_ext', 'autoreload')
+    ipython.run_line_magic('autoreload','2')
 
 # Import Statements
 
